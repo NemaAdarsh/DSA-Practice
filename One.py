@@ -152,3 +152,6 @@ def find_pairs(enrollments):
 print(find_pairs(enrollments1))
 print(find_pairs(enrollments2))
 print(find_pairs(enrollments3))
+
+# Time Complexity: O(n^2)
+# Space Complexity: O(n)
