@@ -150,3 +150,5 @@ def find_pairs(enrollments):
     return result
 
 print(find_pairs(enrollments1))
+print(find_pairs(enrollments2))
+print(find_pairs(enrollments3))
