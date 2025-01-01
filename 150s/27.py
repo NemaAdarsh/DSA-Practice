@@ -54,5 +54,7 @@ def solution(nums, val):
 nums = [3,2,2,3]
 val = 3
 print(solution(nums, val)) # 2 [2,2]
+# Time complexity: O(n)
+# Space complexity: O(1)
 
 
