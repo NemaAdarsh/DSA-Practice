@@ -43,9 +43,6 @@ Follow up: Can you come up with an algorithm that runs in O(m + n) time?
 '''
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
-        # nums1[m:] = nums2
-        # nums1.sort()
-        # return nums1
         nums1[m:] = nums2
         nums1.sort()
 '''
