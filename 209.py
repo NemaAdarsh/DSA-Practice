@@ -20,6 +20,27 @@ Input: target = 11, nums = [1,1,1,1,1,1,1,1]
 Output: 0
 '''
 
+'''
+class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+        start = 0
+        current_window = 0
+        result = float('inf')
+
+        for end in range(len(nums)):
+            current_window += nums[end]
+
+        
+        while current_window >= target:
+            result = min(result, end - start + 1)
+            current_window -= nums[start]
+            start += 1
+
+        return result if result != float('inf') else 0
+
+'''
+
+
 def minSubArrayLen(target, nums):
     left = 0
     right = 0
