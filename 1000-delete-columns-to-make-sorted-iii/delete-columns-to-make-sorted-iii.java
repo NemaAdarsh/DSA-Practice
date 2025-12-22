@@ -1,0 +1,23 @@
+class Solution {
+    public int minDeletionSize(String[] strs) {
+        int n = strs.length, m = strs[0].length();
+        int[] dp = new int[m];
+        int best = 0;
+
+        for (int j = 0; j < m; j++) {
+            dp[j] = 1;
+            for (int i = 0; i < j; i++) {
+                boolean ok = true;
+                for (int r = 0; r < n; r++) {
+                    if (strs[r].charAt(i) > strs[r].charAt(j)) {
+                        ok = false;
+                        break;
+                    }
+                }
+                if (ok) dp[j] = Math.max(dp[j], dp[i] + 1);
+            }
+            best = Math.max(best, dp[j]);
+        }
+        return m - best;
+    }
+}
